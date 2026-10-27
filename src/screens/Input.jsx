@@ -30,12 +30,12 @@ export default function Input() {
   return (
     <div className="mx-auto max-w-2xl">
       <h1 className="text-4xl font-bold tracking-tight">Turn a recording into notes.</h1>
-      <p className="mt-3 text-slate-600">Upload a meeting or paste a YouTube link. You get a summary, action items, decisions, open questions, and a transcript you can ask questions about.</p>
+      <p className="mt-3 text-slate-600">Upload a meeting. You get a summary, action items, decisions, open questions, and a transcript you can ask questions about.</p>
 
       <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6">
         <div className="flex gap-2">
           <button className={tabCls('file')} onClick={() => { setTab('file'); setErr(null) }}>Upload file</button>
-          <button className={tabCls('url')} onClick={() => { setTab('url'); setErr(null) }}>YouTube link</button>
+          {/* <button className={tabCls('url')} onClick={() => { setTab('url'); setErr(null) }}>YouTube link</button> */}
         </div>
 
         {tab === 'file' ? (
@@ -68,7 +68,7 @@ export default function Input() {
           />
         )}
 
-        <label className="mt-5 block text-sm font-medium">Language of the recording</label>
+        <label className="mt-5 block text-sm font-medium">Language of the recording(Optional, auto detected)</label>
         <select value={lang} onChange={(e) => setLang(e.target.value)} className="mt-1 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 capitalize">
           {LANGS.map((l) => <option key={l} value={l}>{l}</option>)}
         </select>
