@@ -76,7 +76,7 @@ export default function Input() {
         {(err || error) && <p className="mt-4 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-800">{err || error}</p>}
 
         <button onClick={go} disabled={busy} className="mt-6 w-full rounded-xl bg-signal py-3 font-semibold text-white hover:bg-teal-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal disabled:opacity-60">
-          {busy ? 'Sending. This can take a moment if the server is waking up.' : 'Start analysis'}
+          {busy ? 'Uploading your video. Please Wait....' : 'Start analysis'}
         </button>
       </div>
     </div>
